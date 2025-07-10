@@ -1,0 +1,72 @@
+{
+  "garishapatisrikrishna@gmail.com": [
+    {
+      "service": "Hotel Taj Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "5000",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Hotel Taj Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "5000",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Hotel Taj Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "5000",
+      "status": "Cancelled"
+    },
+    {
+      "service": "The Leela Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "7200",
+      "status": "Cancelled"
+    },
+    {
+      "service": "The Leela Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "7200",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Volvo Sleeper Bus",
+      "time": "Departure: 10:00 PM",
+      "price": "1200",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Hotel Taj Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "5000",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Hotel Taj Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "5000",
+      "status": "Confirmed"
+    }
+  ],
+  "srikrishna1609@gmail.com": [
+    {
+      "service": "The Leela Palace",
+      "time": "Check-in: 12:00 PM",
+      "price": "7200",
+      "status": "Cancelled"
+    },
+    {
+      "service": "Volvo Sleeper Bus",
+      "time": "Departure: 10:00 PM",
+      "price": "1200",
+      "status": "Confirmed"
+    },
+    {
+      "service": "Rajdhani Express",
+      "time": "Departure: 10:00 PM",
+      "price": "999",
+      "status": "Confirmed"
+    }
+  ]
+}

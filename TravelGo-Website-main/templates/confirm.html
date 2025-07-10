@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelGo - Booking Confirmation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md text-center">
+    {% if booking %}
+      <h2 class="text-2xl font-bold text-green-600 mb-4">Booking Confirmed!</h2>
+      <div class="text-left mb-4">
+        <p class="text-lg mb-2 font-bold">Service: <span class="font-normal">{{ booking.service }}</span></p>
+        <p class="mb-2 font-bold">Time: <span class="font-normal">{{ booking.time }}</span></p>
+        <p class="mb-2 font-bold">Price: <span class="font-normal">₹{{ booking.price }}</span></p>
+        <p class="mb-4 font-bold text-green-500">Status: <span class="font-normal text-green-600">{{ booking.status }}</span></p>
+      </div>
+      <a href="{{ url_for('dashboard') }}" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Back to Dashboard</a>
+    {% else %}
+      <h2 class="text-xl font-semibold text-gray-700">No booking data found.</h2>
+      <a href="{{ url_for('dashboard') }}" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Go Back</a>
+    {% endif %}
+  </div>
+
+</body>
+</html>
