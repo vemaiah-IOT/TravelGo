@@ -1,0 +1,11 @@
+{
+  "garishapatisrikrishna@gmail.com": {
+    "name": "Sri Krishna Garishapati ",
+    "password": "scrypt:32768:8:1$hDcY6p6TQiDncHXU$a8b2e29fde046b942dcc50f31842d4d2211aaf2e6098a408e8157e2a18622b2edccbfc8eb119d5140340dbc7c4f35b8c07e9805fcb9df9df95baf61e531e2757",
+    "phone": "+91 6302765955"
+  },
+  "srikrishna1609@gmail.com": {
+    "name": "Vamsi",
+    "password": "scrypt:32768:8:1$JUs1nVvznZCPSQWA$54dd6c329ebf0b1f11f97880b4a42d4e5f869b04c2b67449293b457cb3125a769bed3048e99b7f1dffb5500e28926a0ddde8b22bdc093cb9987e1eab02659039"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelGo – Bookings History</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen font-sans">
+  <div class="max-w-4xl mx-auto py-12 px-6">
+    <div class="bg-white rounded-3xl shadow-xl p-8 mb-10 border border-blue-100 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <div>
+        <h2 class="text-3xl font-extrabold text-blue-700 mb-2">Bookings History</h2>
+        <p class="text-gray-500">Overview of all your bookings and cancellations</p>
+      </div>
+      <div class="flex gap-8">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-600">{{ num_bookings }}</div>
+          <div class="text-gray-500">Total Bookings</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-red-500">{{ num_cancellations }}</div>
+          <div class="text-gray-500">Cancellations</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-8">
+      <!-- Removed top Back to Dashboard button -->
+    <div class="mt-8 flex justify-end">
+      <a href="{{ url_for('dashboard') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold shadow transition">Back to Dashboard</a>
+    </div>
+      <h3 class="text-2xl font-bold text-blue-600 mb-6">All Bookings</h3>
+      <ul class="space-y-4">
+        {% for booking in bookings %}
+        <li class="border border-blue-100 rounded-lg p-4 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <span class="font-semibold text-blue-700">{{ booking.service }}</span>
+            <span class="text-gray-500 ml-2">{{ booking.details }}</span>
+            {% if booking.status.lower() == 'cancelled' %}
+              <span class="ml-2 px-2 py-1 rounded-full bg-red-100 text-red-600 text-xs font-bold">Cancelled</span>
+            {% else %}
+              <span class="ml-2 px-2 py-1 rounded-full bg-green-100 text-green-600 text-xs font-bold">Active</span>
+            {% endif %}
+          </div>
+          <div class="text-gray-400 text-sm mt-2 md:mt-0">{{ booking.date }}</div>
+        </li>
+        {% else %}
+        <li class="text-gray-400">No bookings found.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
